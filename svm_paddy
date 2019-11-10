@@ -144,8 +144,4 @@ SVM_model1=fitcecoc(training_data,training_class_name);
 accuracy = sum(predicted_class_name == validating_class_names)/numel(validating_class_names)*100
 disp(accuracy);
 disp('svm');
-knn_model= fitcknn(training_data,training_class_name,'NumNeighbors',7,'NSMethod','exhaustive','Distance','minkowski','Standardize',1);
-[predicted_class_name,score]=predict(knn_model,validating_data);
-accuracy = sum(predicted_class_name == validating_class_names)/numel(validating_class_names)*100
-disp(accuracy);
-disp('knn');
+
